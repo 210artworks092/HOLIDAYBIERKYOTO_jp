@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -5,12 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HOLIDAY BIER KYOTO | ご予約の流れ</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+
     body {
-      font-family: "Georgia", "游明朝", serif;
+      font-family: 'Noto Sans JP', sans-serif;
       margin: 0;
       padding: 0;
       background-color: #fdfcf8;
-      color: #2c2c2c;
+      color: #3a2e29;
       line-height: 1.9;
       font-size: 1.05rem;
     }
@@ -19,15 +22,21 @@
       margin: 0 auto;
       padding: 2rem 1rem;
     }
+    .logo {
+      display: block;
+      margin: 0 auto 2rem;
+      max-width: 220px;
+    }
     h1, h2, h3 {
-      font-family: "Georgia", "游明朝", serif;
-      color: #1c1c1c;
+      font-weight: 700;
+      color: #2a1f1a;
     }
     h1 {
       font-size: 2rem;
       margin-bottom: 2rem;
       border-bottom: 1px solid #ccc;
       padding-bottom: 0.5rem;
+      text-align: center;
     }
     h2 {
       font-size: 1.4rem;
@@ -51,54 +60,75 @@
     .cta {
       text-align: center;
       margin: 4rem 0 2rem;
-      padding: 2rem 1rem;
+      padding: 3rem 1rem;
       background-color: #ece8e1;
       border-radius: 10px;
       border: 2px solid #7a6c5d;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
     }
     .cta p {
       font-size: 1.2rem;
-      margin-bottom: 1.2rem;
+      margin: 0;
       font-weight: bold;
     }
-    .cta a {
-      display: inline-block;
+    .cta .btn-group {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      width: 100%;
+      align-items: center;
+    }
+    .cta .btn-group a {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
       background-color: #7a6c5d;
       color: #fff;
-      padding: 0.9rem 2rem;
+      padding: 0.9rem 1.5rem;
       text-decoration: none;
       font-size: 1.1rem;
       border-radius: 6px;
       transition: background-color 0.3s ease, transform 0.2s ease;
+      width: 80%;
+      justify-content: center;
     }
-    .cta a:hover {
+    .cta .btn-group a:hover {
       background-color: #5e5247;
       transform: scale(1.05);
     }
-    img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 8px;
-      margin-bottom: 2rem;
+    .cta .btn-group a img {
+      height: 20px;
+      width: auto;
+    }
+    @media (min-width: 480px) {
+      .cta .btn-group {
+        flex-direction: row;
+        justify-content: center;
+      }
+      .cta .btn-group a {
+        width: auto;
+      }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <img src="img/view.png" alt="HOLIDAY BIER KYOTO からの景色">
+    <img src="img/logo.png" alt="HOLIDAY BIER KYOTO ロゴ" class="logo">
     <h1>ご予約の流れ</h1>
-    <p>HOLIDAY BIER KYOTOは、京都・久美浜湾を望む静かなロケーションにあるプライベートスタジオです。<br>
-    都会の喧騒から離れ、海や自然を眺めながら、ゆったりとした時間を過ごしていただけます。<br>
-    リラックスした雰囲気の中で、タトゥーのご相談や施術を受けたい方にぴったりの空間です。</p>
-    <p>「タトゥーは初めてで不安…」という方も、どうぞご安心ください。無理に進めることはありませんので、気になることは気軽にご相談ください。</p>
+    <p>HOLIDAY BIER KYOTOは、京都・久美浜湾を望む静かなロケーションにあるプライベートスタジオです。都会の喧騒から離れ、海や自然を眺めながら、ゆったりとした時間を過ごしていただけます。</p>
+    <p>「タトゥーは初めてで不安…」という方も、どうぞお気軽にご相談ください。</p>
 
     <h2>1. ご予約・お問い合わせ</h2>
     <p>公式LINEまたはInstagramのDMよりご連絡ください。以下の内容をお送りいただけるとスムーズです。</p>
     <ul>
-      <li>ご希望のモチーフやイメージ（参考画像もOK）</li>
-      <li>サイズ（cm単位でのおおよその大きさ）</li>
+      <li>ご希望のモチーフやイメージ（参考画像でもOK）</li>
+      <li>サイズ</li>
       <li>希望部位（既にタトゥーがある場合は、その部位の写真も）</li>
-      <li>ご希望日時（複数案あると助かります）</li>
+      <li>ご希望日時</li>
     </ul>
     <p>まだデザインが決まっていない方、迷っている方も歓迎です。「話だけ聞いてみたい」もOK！</p>
 
@@ -134,7 +164,14 @@
 
     <div class="cta">
       <p>ご予約・ご相談はお気軽にどうぞ！</p>
-      <a href="https://lin.ee/CC4CzWU" target="_blank" rel="noopener noreferrer">▶ 公式LINEで予約・お問い合わせする</a>
+      <div class="btn-group">
+        <a href="https://lin.ee/CC4CzWU" target="_blank" rel="noopener noreferrer">
+          <img src="img/line-icon.png" alt="LINE"> 公式LINE
+        </a>
+        <a href="https://www.instagram.com/holiday_bier_kyoto_tattoo/" target="_blank" rel="noopener noreferrer">
+          <img src="img/instagram-icon.png" alt="Instagram"> Instagram
+        </a>
+      </div>
     </div>
   </div>
 </body>
